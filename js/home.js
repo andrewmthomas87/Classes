@@ -3,6 +3,12 @@ var position = 0;
 
 document.addEventListener('deviceready', function() {
 	$('section div div textarea').elastic();
+	$('section div div textarea').focus(function() {
+		$('nav').fadeOut('fast');
+	});
+	$('section div div textarea').blur(function() {
+		$('nav').fadeIn('fast');
+	});
 	$('nav a').click(function() {
 		position = position ? 0 : 1;
 		$('section>div').css('left', position ? '-100%' : '0');
