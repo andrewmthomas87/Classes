@@ -2,17 +2,8 @@
 var position = 0;
 
 document.addEventListener('deviceready', function() {
-	/*
-	if (!localStorage.blockData) {
-		localStorage.blockData = [];
-		for (i = 0; i < 8; i++) {
-			localStorage.blockData[i] = '';
-		}
-	}
-	*/
-	alert(localStorage.blockData);
 	for (i = 0; i < 8; i++) {
-		$('section div div textarea#' + (i + 1)).val(localStorage.blockData[i]);
+		$('section div div textarea#' + (i + 1)).val(window.localStorage.getItem('block-' + (i + 1)));
 	}
 	$('section div div textarea').elastic();
 	$('section div div textarea').focus(function() {
@@ -22,7 +13,7 @@ document.addEventListener('deviceready', function() {
 	$('section div div textarea').blur(function() {
 		$('nav').fadeIn(125);
 		$('section').css('padding-top', '4.625em');
-		localStorage.blockData[parseInt($(this).attr('id')) - 1] = $(this).val();
+		window.localStorage.setItem('block-' + (parseInt($(this).attr('id')) - 1), $(this).val());
 	});
 	$('nav a').click(function() {
 		position = position ? 0 : 1;
