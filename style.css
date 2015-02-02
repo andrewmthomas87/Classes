@@ -18,7 +18,7 @@ html, body {
 
 body {
 	font-family: 'Lato', sans-serif;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 nav {
@@ -65,18 +65,19 @@ nav span {
 }
 
 section {
+	position: relative;
+	left: 0;
 	width: 100%;
-	overflow-x: hidden;
+	white-space: nowrap;
+	transition: left 0.25s ease;
 }
 
 section>div {
 	display: inline-block;
-	position: relative;
-	left: 0;
 	width: 100%;
 	text-align: center;
 	vertical-align: top;
-	transition: left 0.25s ease, height 0.25s ease;
+	transition: height 0.25s ease;
 }
 
 section>div:last-child {
