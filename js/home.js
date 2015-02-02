@@ -2,16 +2,16 @@
 var position = 0;
 
 document.addEventListener('deviceready', function() {
-	if (!localStorage.data) {
-		alert('Setting localStorage data');
-		localStorage.data = [];
+	/*
+	if (!localStorage.blockData) {
+		localStorage.blockData = [];
 		for (i = 0; i < 8; i++) {
-			localStorage.data[i] = '';
+			localStorage.blockData[i] = '';
 		}
 	}
+	*/
 	for (i = 0; i < 8; i++) {
-		alert('Placing localStorage data');
-		$('section div div textarea#' + (i + 1)).val(localStorage.data[i]);
+		$('section div div textarea#' + (i + 1)).val(localStorage.blockData[i]);
 	}
 	$('section div div textarea').elastic();
 	$('section div div textarea').focus(function() {
@@ -21,8 +21,7 @@ document.addEventListener('deviceready', function() {
 	$('section div div textarea').blur(function() {
 		$('nav').fadeIn(125);
 		$('section').css('padding-top', '4.625em');
-		alert('Saving data to ' + (parseInt($(this).attr('id')) - 1) + ' index of localStorage.data');
-		localStorage.data[parseInt($(this).attr('id')) - 1] = $(this).val();
+		localStorage.blockData[parseInt($(this).attr('id')) - 1] = $(this).val();
 	});
 	$('nav a').click(function() {
 		position = position ? 0 : 1;
