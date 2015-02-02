@@ -1,12 +1,20 @@
 
 var position = 0;
+var windowPosition;
 
 document.addEventListener('deviceready', function() {
 	$('section div div textarea').elastic();
 	$('section div div textarea').focus(function() {
+		windowPosition = $(window).scrollTop();
+		$('html, body').animate({
+			scrollTop: $(this).offset().top
+		}, 500);
 		$('nav').fadeOut('fast');
 	});
 	$('section div div textarea').blur(function() {
+		$('html, body').animate({
+			scrollTop: windowPosition
+		}, 500);
 		$('nav').fadeIn('fast');
 	});
 	$('nav a').click(function() {
