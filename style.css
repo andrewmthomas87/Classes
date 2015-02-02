@@ -28,6 +28,7 @@ nav {
 	right: 0;
 	width: 100%;
 	background-color: #3498db;
+	z-index: 100;
 }
 
 nav>* {
@@ -37,7 +38,6 @@ nav>* {
 	font-weight: 400;
 	line-height: 1em;
 	text-align: center;
-	z-index: 100;
 }
 
 nav a {
@@ -65,19 +65,20 @@ nav span {
 }
 
 section {
-	position: relative;
-	left: 0;
 	width: 100%;
+	padding-top: 4.625em;
+	overflow-x: hidden;
 	white-space: nowrap;
-	transition: left 0.25s ease;
 }
 
 section>div {
 	display: inline-block;
+	position: relative;
+	left: 0;
 	width: 100%;
 	text-align: center;
 	vertical-align: top;
-	transition: height 0.25s ease;
+	transition: left 0.25s ease, height 0.25s ease;
 }
 
 section>div:last-child {
