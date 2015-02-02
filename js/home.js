@@ -10,6 +10,7 @@ document.addEventListener('deviceready', function() {
 		}
 	}
 	*/
+	alert(localStorage.blockData);
 	for (i = 0; i < 8; i++) {
 		$('section div div textarea#' + (i + 1)).val(localStorage.blockData[i]);
 	}
