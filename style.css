@@ -69,7 +69,7 @@ section {
 	padding-top: 4.625em;
 	overflow-x: hidden;
 	white-space: nowrap;
-	transition: padding-top 0.25s ease;
+	transition: padding-top 0.125s ease;
 }
 
 section>div {

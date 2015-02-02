@@ -4,11 +4,11 @@ var position = 0;
 document.addEventListener('deviceready', function() {
 	$('section div div textarea').elastic();
 	$('section div div textarea').focus(function() {
-		$('nav').fadeOut('fast');
+		$('nav').fadeOut(125);
 		$('section').css('padding-top', '0');
 	});
 	$('section div div textarea').blur(function() {
-		$('nav').fadeIn('fast');
+		$('nav').fadeIn(125);
 		$('section').css('padding-top', '4.625em');
 	});
 	$('nav a').click(function() {
