@@ -86,12 +86,27 @@ section>div:last-child {
 }
 
 section div div h3 {
-	color: #7f8c8d;
+	color: #555;
 	width: calc(100% - 4em);
 	padding: 0.5em 2em;
 	margin: 0;
 	background-color: #ecf0f1;
-	font-size: 1.25em;
+	font-size: 1.125em;
 	font-weight: 400;
 	text-align: left;
+}
+
+section div div textarea {
+	display: block;
+	color: #222;
+	width: calc(100% - 4em);
+	min-height: 5em;
+	padding: 1em 2em;
+	background-color: #fff;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.25em;
+	font-weight: 400;
 }
