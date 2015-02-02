@@ -5,9 +5,11 @@ document.addEventListener('deviceready', function() {
 	$('section div div textarea').elastic();
 	$('section div div textarea').focus(function() {
 		$('nav').fadeOut('fast');
+		$('section').css('padding-top', '0');
 	});
 	$('section div div textarea').blur(function() {
 		$('nav').fadeIn('fast');
+		$('section').css('padding-top', '4.625em');
 	});
 	$('nav a').click(function() {
 		position = position ? 0 : 1;
