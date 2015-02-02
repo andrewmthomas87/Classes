@@ -101,7 +101,6 @@ section div div textarea {
 	display: block;
 	color: #222;
 	width: calc(100% - 1em);
-	min-height: 5em;
 	padding: 0.5em;
 	background-color: #fff;
 	border: none;
