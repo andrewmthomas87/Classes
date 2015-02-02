@@ -2,6 +2,15 @@
 var position = 0;
 
 document.addEventListener('deviceready', function() {
+	if (!localStorage.data) {
+		localStorage.data = [];
+		for (i = 0; i < 8; i++) {
+			localStorage.data[i] = '';
+		}
+	}
+	for (i = 0; i < 8; i++) {
+		$('section div div textarea#' + (i + 1)).val(localStorage.data[i]);
+	}
 	$('section div div textarea').elastic();
 	$('section div div textarea').focus(function() {
 		$('nav').fadeOut(125);
@@ -10,6 +19,7 @@ document.addEventListener('deviceready', function() {
 	$('section div div textarea').blur(function() {
 		$('nav').fadeIn(125);
 		$('section').css('padding-top', '4.625em');
+		localStorage.data[parseInt($(this).attr('id')) - 1] = $(this).val();
 	});
 	$('nav a').click(function() {
 		position = position ? 0 : 1;
