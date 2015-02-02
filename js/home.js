@@ -2,6 +2,7 @@
 var position = 0;
 
 document.addEventListener('deviceready', function() {
+	$('section div div textarea').elastic();
 	$('nav a').click(function() {
 		position = position ? 0 : 1;
 		$('section>div').css('left', position ? '-100%' : '0');
