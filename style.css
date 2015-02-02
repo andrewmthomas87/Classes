@@ -87,8 +87,8 @@ section>div:last-child {
 
 section div div h3 {
 	color: #555;
-	width: calc(100% - 4em);
-	padding: 0.5em 2em;
+	width: calc(100% - 3em);
+	padding: 0.5em 1.5em;
 	margin: 0;
 	background-color: #ecf0f1;
 	font-size: 1.125em;
@@ -99,9 +99,9 @@ section div div h3 {
 section div div textarea {
 	display: block;
 	color: #222;
-	width: calc(100% - 4em);
+	width: calc(100% - 1em);
 	min-height: 5em;
-	padding: 1em 2em;
+	padding: 0.5em;
 	background-color: #fff;
 	border: none;
 	border-radius: 0;
