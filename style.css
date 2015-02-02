@@ -21,8 +21,12 @@ body {
 }
 
 nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	width: 100%;
-	background-color: #1abc9c;
+	background-color: #3498db;
 }
 
 nav>* {
@@ -61,11 +65,12 @@ nav span {
 
 section {
 	width: 100%;
+	padding-top: 4.75em;
 	overflow: hidden;
 	white-space: nowrap;
 }
 
-section div {
+section>div {
 	display: inline-block;
 	position: relative;
 	left: 0;
@@ -75,6 +80,15 @@ section div {
 	transition: left 0.25s ease, height 0.25s ease;
 }
 
-section div:last-child {
+section>div:last-child {
 	height: 0;
+}
+
+section div div h3 {
+	color: #7f8c8d;
+	width: calc(100% - 0.5em);
+	padding: 0.125em 0.25em;
+	background-color: #ecf0f1;
+	font-size: 1em;
+	font-weight: 400;
 }
