@@ -66,10 +66,7 @@ nav span {
 
 section {
 	width: 100%;
-	padding-top: 4.75em;
 	overflow-x: hidden;
-	overflow-y: auto;
-	white-space: nowrap;
 }
 
 section>div {
@@ -88,8 +85,8 @@ section>div:last-child {
 
 section div div h3 {
 	color: #7f8c8d;
-	width: calc(100% - 1em);
-	padding: 0.5em;
+	width: calc(100% - 4em);
+	padding: 0.5em 2em;
 	margin: 0;
 	background-color: #ecf0f1;
 	font-size: 1.25em;
